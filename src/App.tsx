@@ -1,10 +1,14 @@
-import { Header } from './components'
-import './global.scss'
+import {Header} from './components';
+import './global.scss';
+import {Movies} from './pages/Movies';
 
 function App() {
   return (
-   <Header />
-  )
+    <>
+      <Header />
+      <Movies />
+    </>
+  );
 }
 
-export default App
+export default App;
