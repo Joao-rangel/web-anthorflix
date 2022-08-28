@@ -1,0 +1,31 @@
+.movieCard {
+  background: var(--gray-800);
+  padding: 1.25rem 2rem;
+  display: flex;
+  gap: 2rem;
+
+  border-radius: 16px;
+  
+  > img {
+    height: 16rem;
+    border-radius: 8px;
+  }
+
+  main {
+    color: var(--gray-400);
+
+    svg {
+      color: var(--green-500);
+      margin-bottom: 0.5rem;
+    }
+    
+    h1, h3 {
+      color: var(--gray-300);
+      line-height: 1.4;
+    }
+
+    p {
+      margin-top: 0.25rem;
+    }
+  }
+}
