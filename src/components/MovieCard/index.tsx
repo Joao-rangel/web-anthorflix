@@ -3,19 +3,20 @@ import {IoStar, IoStarOutline, IoStarHalf} from 'react-icons/io5';
 
 interface MovieCardProps {
   movie: {
-    Poster: string;
-    Title: string;
-    Genre: string;
-    Plot: string;
-    imdbRating: number;
+    id: string;
+    poster: string;
+    title: string;
+    genre: string;
+    plot: string;
+    rate: number;
   };
 }
 
 export function MovieCard({movie}: MovieCardProps) {
-  const rate = Math.round(movie.imdbRating) / 2;
+  const rate = Math.round(movie.rate) / 2;
   return (
     <div className={styles.movieCard}>
-      <img src={movie.Poster} alt={`${movie.Title} poster`} />
+      <img src={movie.poster} alt={`${movie.title} poster`} />
 
       <main>
         {[...Array(5)].map((_, i) =>
@@ -27,9 +28,9 @@ export function MovieCard({movie}: MovieCardProps) {
             <IoStarOutline key={i + 1} />
           ),
         )}
-        <h1>{movie.Title}</h1>
-        <h3>{movie.Genre}</h3>
-        <p>{movie.Plot}</p>
+        <h1>{movie.title}</h1>
+        <h3>{movie.genre}</h3>
+        <p>{movie.plot}</p>
       </main>
     </div>
   );
