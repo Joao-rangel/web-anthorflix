@@ -3,7 +3,7 @@ import {api} from '../api';
 export type Movie = {
   id: string;
   title: string;
-  year: number;
+  year: string;
   rate: number;
   genre: string;
   director: string;
@@ -13,8 +13,20 @@ export type Movie = {
   plot: string;
 };
 
+export const getMovieById = async (id: string): Promise<Movie> => {
+  const {data} = await api.get(`movies/${id}`);
+
+  return data.movie;
+};
+
 export const getMovies = async (year?: string): Promise<Movie[]> => {
   const {data} = await api.get('movies', {params: {year}});
 
   return data.movies;
+};
+
+export const deleteMovie = async (id: string): Promise<any> => {
+  const response = await api.delete(`movies/${id}`);
+
+  return response;
 };

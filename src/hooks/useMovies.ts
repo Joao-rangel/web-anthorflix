@@ -1,5 +1,5 @@
 import {useState, useEffect, useCallback} from 'react';
-import {Movie, getMovies} from '../services/movies/getMovies';
+import {Movie, getMovies} from '../services/movies';
 
 export const useMovies = () => {
   const [movies, setMovies] = useState<Movie[]>([]);

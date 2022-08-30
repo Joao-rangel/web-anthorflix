@@ -1,4 +1,4 @@
-.movieCard {
+.movieDetailsContent {
   background: var(--gray-800);
   padding: 1.25rem 2rem;
   display: flex;
@@ -9,12 +9,6 @@
   img {
     height: 16rem;
     border-radius: 8px;
-
-    transition: opacity 0.2s;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 
   main {
@@ -39,25 +33,20 @@
   
   p {
     margin-top: 0.25rem;
+    color: var(--gray-500);
+
+    b {
+      margin-right: 0.5rem;
+      color: var(--gray-400);
+    }
   }
 }
 
-.detailsLink {
-  color: var(--green-500);
-  display: flex;
-  align-items: center;
-  // margin-left: 5rem;
-  height: 2rem;
-
-  svg{
-    margin-left: 0.25rem;
-    height: 1.4rem;
-    width: 1.4rem;
-  }
-
-  transition: opacity 0.2s;
-
-  &:hover {
-    opacity: 0.75;
-  }
+.deleteButton {
+  background: transparent;
+  border: 0;
+  color: var(--gray-400);
+  cursor: pointer;
+  line-height: 0;
+  align-self: flex-start;
 }

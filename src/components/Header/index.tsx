@@ -8,9 +8,11 @@ export function Header() {
     <header className={styles.header}>
       <img src={appLogo} alt="Logotipo do web app" />
       <nav className={styles.nav}>
-        <Link to="/movies">Movies</Link>
+        <Link to="/">Movies</Link>
         <Link to="/my-list">My List</Link>
       </nav>
     </header>
   );
 }
+
+// TODO: add search batendo em movies/search?title='nome do filme'
