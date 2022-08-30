@@ -7,11 +7,11 @@ export const useMovieById = (id: string) => {
   const getApiMovie = useCallback(async () => {
     const movie = await getMovieById(id);
     setMovie(movie);
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     getApiMovie();
-  }, []);
+  }, [id]);
 
   return movie;
 };

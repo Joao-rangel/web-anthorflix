@@ -1,30 +1,62 @@
 .header {
   background: var(--gray-800);
+  padding: 1.5rem;
   display: flex;
-  justify-content: center;
-  padding: 1.25rem 0;
+  justify-content: space-around;
   
   img {
-    height: 2rem;
+    height: 2.75rem;
+
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
-.nav {
-  margin-left: 4rem;
-  height: 2rem;
+.searchContainer {
+  display: flex;
+  margin-left: 5vw;
 
-  a {
-    line-height: 2.5rem;
+  input {
+    flex: 1;
+    border-radius: 6px;
+    border: 0;
+    background: var(--gray-900);
     color: var(--gray-300);
+    padding: 0.75rem 0.75rem;
+  }
 
-    transition: color 0.2s;
-
-    & + a {
-      margin-left: 2rem;
-    }
-
+  button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 0;
+    padding: 0.75rem;
+    background: transparent;
+    border: 1px solid var(--green-300);
+    color: var(--green-300);
+    font-weight: bold;
+    border-radius: 6px;
+    
     &:hover {
+      background: var(--green-500);
+      border-color: var(--green-500);
       color: var(--white);
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s;
     }
+  }
+}
+
+.spinner {
+  animation: fa-spin 2s infinite linear;
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
   }
 }

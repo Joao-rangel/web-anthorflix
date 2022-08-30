@@ -72,7 +72,7 @@ export function MovieDetailsContent({movie}: MovieDetailsContentProps) {
         </div>
       </main>
       <button className={styles.deleteButton} onClick={() => handleDelete()}>
-        <RiDeleteBin6Line size={18} />
+        <RiDeleteBin6Line size={20} />
       </button>
     </div>
   );

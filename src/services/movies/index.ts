@@ -19,6 +19,12 @@ export const getMovieById = async (id: string): Promise<Movie> => {
   return data.movie;
 };
 
+export const getMovieByTitle = async (title: string): Promise<Movie> => {
+  const {data} = await api.get('movies/search', {params: {title}});
+
+  return data.movie;
+};
+
 export const getMovies = async (year?: string): Promise<Movie[]> => {
   const {data} = await api.get('movies', {params: {year}});
 
